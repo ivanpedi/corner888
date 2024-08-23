@@ -1,0 +1,88 @@
+#img_map_contacto {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto; /* Centra el contenedor en el viewport */
+    margin-top: 100px;
+    margin-bottom: 60px;
+    flex-wrap: wrap; /* Permite que los elementos se reorganicen en pantallas más pequeñas */
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.img_contacto {
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+#imgCadiz, #imgJerez, #imgSanFdo {
+    border: 5px solid orange;
+    border-radius: 20px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.9);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+#imgCadiz:hover, #imgJerez:hover, #imgSanFdo:hover {
+    transform: scale(1.1);
+    border: 5px solid red;
+}
+
+#visit_nuest {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 50px;
+    font-style: italic;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.tiendas {
+    text-align: center; /* Asegura que el texto esté centrado */
+    font-weight: bold;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 40px;
+}
+
+.pincha_aqui {
+    font-size: 30px;
+    text-align: center; /* Asegura que el texto esté centrado */
+    font-weight: bold;
+    margin-bottom: 150px;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 950px) {
+    #img_map_contacto {
+        flex-direction: column; /* Coloca las imágenes en una columna */
+        align-items: center; /* Centra las imágenes en la columna */
+        margin: 0 auto; /* Centra el contenedor */
+    }
+
+    #imgCadiz, #imgJerez, #imgSanFdo {
+        width: 90%; /* Las imágenes ocupan el 90% del ancho del contenedor en pantallas pequeñas */
+        margin: 0 auto 40px auto; /* Centra las imágenes y ajusta el margen inferior */
+    }
+
+    .tiendas {
+        margin-bottom: 30px; /* Reduce el margen inferior para un mejor ajuste en pantallas pequeñas */
+        margin-top: 20px; /* Ajusta el margen superior para un mejor ajuste en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    #img_map_contacto {
+        flex-direction: column; /* Mantiene los elementos en columna para pantallas más pequeñas */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    #imgCadiz, #imgJerez, #imgSanFdo {
+        width: 90%; /* Aumenta el ancho de las imágenes para pantallas muy pequeñas */
+        margin: 0 auto 20px auto; /* Centra las imágenes y ajusta el margen inferior */
+    }
+
+    .tiendas {
+        margin-bottom: 20px; /* Ajusta el margen inferior para un mejor ajuste en pantallas muy pequeñas */
+        margin-top: 10px; /* Ajusta el margen superior para un mejor ajuste en pantallas muy pequeñas */
+    }
+}
